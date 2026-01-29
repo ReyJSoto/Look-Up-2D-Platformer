@@ -8,6 +8,12 @@ func respawn():
 	set_process_input(true)
 	set_physics_process(true)
 
+func jumpBoost():
+	JUMP_VELOCITY = -500.0
+
+func regularJump():
+	JUMP_VELOCITY = -300.0
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -31,10 +37,3 @@ func _physics_process(delta: float) -> void:
 func die():
 	set_process_input(false)
 	set_physics_process(false)
-
-
-func jumpBoost():
-	JUMP_VELOCITY = -500.0
-
-func regularJump():
-	JUMP_VELOCITY = -300.0
