@@ -33,8 +33,8 @@ func die():
 	set_physics_process(false)
 
 
-func _on_collision_shape_2d_tree_entered() -> void:
-	await get_tree().create_timer(0.5).timeout
+func jumpBoost():
 	JUMP_VELOCITY = -500.0
-	await get_tree().create_timer(3.0).timeout
+
+func regularJump():
 	JUMP_VELOCITY = -300.0
